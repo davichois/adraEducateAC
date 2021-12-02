@@ -1,0 +1,41 @@
+.acordeon {
+  margin-bottom: 10px;
+}
+
+.header-acordeon {
+  display: flex;
+  align-items: center;
+}
+
+.header-acordeon p {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  margin-left: 5px;
+  color: var(--primary-color);
+}
+
+.bx,
+.bx-chevron-right {
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all cubic-bezier(0.4, 0, 1, 1) 0.2s;
+}
+
+.active-chevron {
+  transform: rotate(90deg);
+}
+
+.acordeon-content {
+  display: none;
+  margin-left: 30px;
+  transition: ease-in-out all 0.5s;
+}
+
+.active-content {
+  display: block;
+}

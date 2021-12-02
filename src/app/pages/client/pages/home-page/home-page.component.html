@@ -1,0 +1,46 @@
+<div class="content-global">
+  <div class="home__grid">
+    <app-ranking-client-component></app-ranking-client-component>
+
+    <div class="card__meeting">
+      <div class="header__capacitacion">
+        <h2>Meeting ADRA</h2>
+        <p>ver todo</p>
+      </div>
+      <app-card-capacitacion-component></app-card-capacitacion-component>
+    </div>
+
+    <div class="reflexion__pedido">
+
+      <div class="user__reflexion">
+        <div class="take__day">
+          <p>DIA DE CAPACITACION ASIGNADA : <span>20/09/2021</span></p>
+        </div>
+        <div class="reflexion">
+          <h4>Reflexion díaria</h4>
+          <p>Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará
+            contigo en dondequiera que vayas.</p>
+          <span>Josué 1:9</span>
+        </div>
+      </div>
+
+      <div class="pedido__oracion">
+        <div class="input__pedido">
+          <input type="text" placeholder="Escribe tu pedido de oracion">
+        </div>
+        <div class="send__pedido">
+          <app-button [fontSize]="12" [paddingRL]="10" [paddingTB]="4" name="enviar"></app-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card__webinar">
+      <div class="header__capacitacion">
+        <h2>Webinar ADRA</h2>
+        <p>ver todo</p>
+      </div>
+      <app-card-capacitacion-component></app-card-capacitacion-component>
+    </div>
+
+  </div>
+</div>

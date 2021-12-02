@@ -1,0 +1,25 @@
+<div class="header__client">
+  <div class="logo-user">
+    <img src="../../../../assets/img/logo.png">
+    <h2>ADRA</h2>
+  </div>
+
+  <div class="user__personal">
+    <div class="img__avatar">
+      <img
+        src="https://scontent.flim10-1.fna.fbcdn.net/v/t1.6435-9/83295147_2571024996513892_7247307616039206912_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=IMnMeUezaGsAX_PqF8x&_nc_ht=scontent.flim10-1.fna&oh=a8f5848fbdd79a0388e0d4e8c99a6302&oe=61CB0A90"
+        alt="">
+    </div>
+    <div class="option__user" [ngClass]="{'active__option': state_option}" (click)="onActiveOption()">
+      <img src="../../../../../assets/icon/chevron-down.svg">
+    </div>
+  </div>
+
+  <div class="box__option" *ngIf="state_option">
+    <ul>
+      <li>Perfil</li>
+      <li [routerLink]="'/admin'" >Panel</li>
+      <li>Salir</li>
+    </ul>
+  </div>
+</div>

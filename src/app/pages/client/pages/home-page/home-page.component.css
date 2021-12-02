@@ -1,0 +1,146 @@
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 140px 520px 520px;
+  gap: 10px;
+  grid-template-areas:
+    "ranking ranking"
+    "meeting reflexionPedido"
+    "webinar webinar";
+}
+
+.home__grid app-ranking-client-component {
+  grid-area: ranking;
+}
+
+.home__grid .card__meeting {
+  grid-area: meeting;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card__meeting .header__capacitacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header__capacitacion h2 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--secundary-color_black);
+}
+
+.header__capacitacion p {
+  padding-right: 10px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.card__webinar {
+  grid-area: webinar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card__webinar .header__capacitacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.reflexion__pedido {
+  grid-area: reflexionPedido;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 20px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+.user__reflexion .take__day p {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  color: var(--secundary-color_gray);
+}
+
+.user__reflexion .take__day p span {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--secundary-color_black);
+}
+
+.reflexion {
+  width: 100%;
+  height: auto;
+  background-color: var(--secundary-color_whiteitermedio);
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reflexion h4 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 5px;
+  color: var(--secundary-color_black);
+}
+
+.reflexion p {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: justify;
+  color: var(--secundary-color_gray);
+}
+
+.reflexion span {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 21px;
+  align-self: flex-end;
+  margin-top: 10px;
+  color: var(--secundary-color_black);
+}
+
+.pedido__oracion {
+  display: flex;
+  align-items: center;
+}
+
+.pedido__oracion .input__pedido input {
+  width: 450px;
+  padding: 15px;
+  margin-right: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secundary-color_whiteitermedio);
+  color: var(--secundary-color_gray);
+}

@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #007b5f;
+  --secundary-color_gray: #37444d;
+  --secundary-color_white: #ffffff;
+  --secundary-color_black: #0f1419;
+  --secundary-color_whiteoscuro: #f0f3f4;
+  --secundary-color_whiteitermedio: #f7f9f9;
+  --blueblackoscuro: #192734;
+  --blueblackintermedio: #14202b;
+  --secundary-color_grayclaro: #8698a4;
+}
+
+.title-page {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  color: var(--secundary-color_gray);
+  padding-bottom: 20px;
+  border-bottom: solid var(--secundary-color_whiteoscuro) 2px;
+}
+
+.content-global {
+  padding: 20px 40px;
+  z-index: 1;
+}
+
+.logo-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+}
+
+.logo-user img {
+  width: 45px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.logo-user h2 {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: var(--primary-color);
+}

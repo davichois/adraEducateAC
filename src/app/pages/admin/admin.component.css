@@ -1,0 +1,15 @@
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "aside content";
+}
+
+.content {
+  grid-area: content;
+  background: var(--secundary-color_white);
+  text-align: justify;
+  overflow-y: auto;
+  padding: 20px;
+}
+

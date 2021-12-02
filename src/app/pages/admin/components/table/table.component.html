@@ -1,0 +1,25 @@
+<div class="main_user-container">
+  <div class="user_header">
+    <h3 class="user_title">{{title}} en ADRA educate</h3>
+    <ul class="user_filtro">
+      <li *ngFor="let filtro of filtros">
+        <input type="radio" name="filtroOfTable" value="{{filtro}}" (change)="onRadioChange($event)">
+        <span>{{filtro}}</span>
+      </li>
+    </ul>
+    <input class="user_search" type="text" placeholder="Buscar" />
+  </div>
+  <div class="table">
+    <div class="table_header grid-table-colm">
+      <div class="th" *ngFor="let head of header"><span>{{head}}</span></div>
+    </div>
+    <div class="table_body grid-table-colm">
+      <div class="tb"><span>1</span></div>
+      <div class="tb"><span>Dani rous</span></div>
+      <div class="tb"><span>28192192</span></div>
+      <div class="tb"><span>Las andinas</span></div>
+      <div class="tb"><progress max="100" value="34">32%</progress></div>
+      <div class="tb"><span>. . . . .</span></div>
+    </div>
+  </div>
+</div>

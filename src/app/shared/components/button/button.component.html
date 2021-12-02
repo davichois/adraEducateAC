@@ -1,0 +1,22 @@
+<div *ngIf="type === 'button'; else buttonFile ">
+  <button
+    [ngStyle]="{'padding-top.px': paddingTB, 'padding-bottom.px': paddingTB, 'padding-right.px': paddingRL, 'padding-left.px': paddingRL}">
+    <img [ngStyle]="{'width.px':width, 'height.px': height}" [src]="icon" [alt]="name" *ngIf="icon">
+    <p [style.font-size.px]="fontSize">{{name}}</p>
+  </button>
+</div>
+
+<ng-template #buttonFile>
+  <input type="file" #inputFile hidden (change)="capturaArchive($event)">
+  <div class="fileButton">
+    <button (click)="openFileSelect()"
+      [ngStyle]="{'padding-top.px': paddingTB, 'padding-bottom.px': paddingTB, 'padding-right.px': paddingRL, 'padding-left.px': paddingRL}">
+      <img [ngStyle]="{'width.px':width, 'height.px': height}" [src]="icon" [alt]="name" *ngIf="icon">
+      <p [style.font-size.px]="fontSize">{{name}}</p>
+    </button>
+    <button *ngIf="stateButtonEnviar"
+      [ngStyle]="{'padding-top.px': 5, 'padding-bottom.px': 5, 'padding-right.px': paddingRL, 'padding-left.px': paddingRL}">
+      subir
+    </button>
+  </div>
+</ng-template>

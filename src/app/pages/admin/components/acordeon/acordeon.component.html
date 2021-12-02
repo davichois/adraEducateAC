@@ -1,0 +1,10 @@
+<div class="acordeon">
+  <div class="header-acordeon">
+    <i class='bx bx-chevron-right' [ngClass]="{'active-chevron': state_acordeon}" (click)="onActiveAcordeon()"></i>
+    <p><strong>ADRA</strong> {{title}}</p>
+  </div>
+
+  <div class="acordeon-content" [ngClass]="{'active-content': state_acordeon}">
+    <app-acordeon-item></app-acordeon-item>
+  </div>
+</div>

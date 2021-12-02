@@ -1,0 +1,90 @@
+{
+  "capacitacion": [
+    {
+      "idCapacitacion": 1,
+      "noCapacitacion": "WhatsApp Bunisses",
+      "deCapacitacion": "Esta es el meeting de WhatsApp para generar dinero.",
+      "feInicioCapacitacion": "2021-09-25",
+      "feFinCapacitacion": "2021-12-25",
+      "tiCapacitacion": "Meeting",
+      "idCapCategoria": 1,
+      "totalRecCapacitacion": "0",
+      "esCapacitacion": "0",
+      "fiImageURL": "http://loquesea.com/imageWhatsAppBunisses"
+    },
+    {
+      "idCapacitacion": 2,
+      "noCapacitacion": "Comer sano",
+      "deCapacitacion": "Esta es el Webinar de Como comer sano para generar buena salud.",
+      "feInicioCapacitacion": "2021-09-25",
+      "feFinCapacitacion": "2021-12-25",
+      "tiCapacitacion": "Webinar",
+      "idCapCategoria": 2,
+      "totalRecCapacitacion": "0",
+      "esCapacitacion": "0",
+      "fiImageURL": "http://loquesea.com/imageComeSano"
+    },
+    {
+      "idCapacitacion": 3,
+      "noCapacitacion": "Como ando jesus en este mundo",
+      "deCapacitacion": "Esta es el Webinar de Como ando jesus en este mundo para conocer mas de el.",
+      "feInicioCapacitacion": "2021-09-25",
+      "feFinCapacitacion": "2021-12-25",
+      "tiCapacitacion": "Webinar",
+      "idCapCategoria": 3,
+      "totalRecCapacitacion": "0",
+      "esCapacitacion": "0",
+      "fiImageURL": "http://loquesea.com/imageComoAndoJesusEnEsteMundo"
+    }
+  ],
+
+  "categoria": [
+    {
+      "idCategoria": 1,
+      "noCategoria": "Redes Sociales"
+    },
+    {
+      "idCategoria": 2,
+      "noCategoria": "Salud Integral"
+    },
+    {
+      "idCategoria": 3,
+      "noCategoria": "Espiritual"
+    }
+  ],
+
+  "persona": [
+    {
+      "idPersona": 1,
+      "name": "David",
+      "apellido": "prada"
+    },
+    {
+      "idPersona": 2,
+      "name": "Luz",
+      "apellido": "Flores"
+    }
+  ],
+
+  "usuario": [
+    {
+      "idUsuario": 1,
+      "credencial": "74228776",
+      "estado": 1,
+      "rol": ["admin"]
+    },
+    {
+      "idUsuario": 2,
+      "credencial": "74229776",
+      "estado": 1,
+      "rol": ["socio"]
+    }
+  ],
+
+  "socio": [
+    {
+      "idSocio": 2,
+      "bamcoComunal": 1
+    }
+  ]
+}

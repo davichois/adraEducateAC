@@ -1,0 +1,45 @@
+.details__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  grid-template-rows: 100px 650px;
+  grid-template-areas:
+    "headerDetails ."
+    "contentDetails .";
+}
+
+.header__details {
+  grid-area: headerDetails;
+}
+
+.header__details h2 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 41px;
+  margin-bottom: 15px;
+}
+
+progress {
+  width: 400px;
+  height: 20px;
+}
+
+.content__details {
+  grid-area: contentDetails;
+}
+
+.sesiones__details {
+  margin-top: 20px;
+  display: flex;
+  padding: 5px 0;
+  width: auto;
+  max-width: 680px;
+  height: auto;
+  overflow-x: scroll;
+}
+
+.sesiones__details app-button{
+  margin: 5px 0;
+}

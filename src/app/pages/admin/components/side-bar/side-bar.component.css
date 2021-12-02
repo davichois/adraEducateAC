@@ -1,0 +1,39 @@
+.aside {
+  grid-area: aside;
+  background: var(--secundary-color_white);
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px 0px 20px 40px;
+  border-right: 2px solid var(--secundary-color_whiteoscuro);
+}
+
+.logo-admin {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-admin img {
+  width: 45px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.logo-admin h2 {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.005em;
+  margin-left: 5px;
+  color: var(--primary-color);
+}
+
+.panel-container {
+  margin-top: 40px;
+}
+
+.aec {
+  margin-top: 20px;
+}
