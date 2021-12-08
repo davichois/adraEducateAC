@@ -1,5 +1,5 @@
 <div *ngIf="type === 'button'; else buttonFile ">
-  <button
+  <button type="button"
     [ngStyle]="{'padding-top.px': paddingTB, 'padding-bottom.px': paddingTB, 'padding-right.px': paddingRL, 'padding-left.px': paddingRL}">
     <img [ngStyle]="{'width.px':width, 'height.px': height}" [src]="icon" [alt]="name" *ngIf="icon">
     <p [style.font-size.px]="fontSize">{{name}}</p>

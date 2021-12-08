@@ -10,6 +10,7 @@ import { AcordeonItemComponent } from './components/acordeon-item/acordeon-item.
 import { TableComponent } from './components/table/table.component';
 import { UsuarioPageComponent } from './pages/socio-page/socio-page.component';
 import { BancoComunalPageComponent } from './pages/banco-comunal-page/banco-comunal-page.component';
+import { TableItemsComponent } from './components/table-items/table-items.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BancoComunalPageComponent } from './pages/banco-comunal-page/banco-comu
     TableComponent,
     UsuarioPageComponent,
     BancoComunalPageComponent,
+    TableItemsComponent,
   ],
   imports: [CommonModule, SharedModule, AdminRoutingModule, SharedModule],
 })

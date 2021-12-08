@@ -14,7 +14,7 @@
 
       <div class="user__reflexion">
         <div class="take__day">
-          <p>DIA DE CAPACITACION ASIGNADA : <span>20/09/2021</span></p>
+          <p>DIA DE MEDITACION ASIGNADA : <span>20/09/2021</span></p>
         </div>
         <div class="reflexion">
           <h4>Reflexion díaria</h4>
@@ -26,10 +26,14 @@
 
       <div class="pedido__oracion">
         <div class="input__pedido">
-          <input type="text" placeholder="Escribe tu pedido de oracion">
+          <input type="text" placeholder="Escribe tu pedido de oracion" [(ngModel)]="dePedidoOracion">
+          <div class="fecha">
+            <span>FECHA FIN : </span>
+            <input type="date" [(ngModel)]="finalDatePedido">
+          </div>
         </div>
         <div class="send__pedido">
-          <app-button [fontSize]="12" [paddingRL]="10" [paddingTB]="4" name="enviar"></app-button>
+          <app-button [fontSize]="12" [paddingRL]="10" [paddingTB]="4" name="enviar" (click)="onPedido()"></app-button>
         </div>
       </div>
     </div>

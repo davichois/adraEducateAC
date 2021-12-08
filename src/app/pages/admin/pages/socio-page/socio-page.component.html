@@ -1,15 +1,15 @@
 <div>
-  <h2 class="title-page">Socios</h2>
+  <h2 class="title-page">Persona</h2>
 
   <div class="acciones-ventana">
     <app-button [fontSize]="14" [paddingRL]="10" [paddingTB]="10" name="importar" icon="./assets/icon/database.svg"
       type="file"></app-button>
-    <app-button (click)="onChangeStateForm()" [fontSize]="14" [paddingRL]="25" [paddingTB]="10" name="Crear socio"
+    <app-button (click)="onChangeStateForm()" [fontSize]="14" [paddingRL]="25" [paddingTB]="10" name="Crear persona"
       icon="./assets/icon/credit-card.svg">
     </app-button>
   </div>
 
-  <app-table></app-table>
+  <app-table name="Personas" [header]="header" [dataTable]="personasList$"></app-table>
 
 
   <div class="user-form" [class.active]="stateForm">

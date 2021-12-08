@@ -1,29 +1,18 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Persona } from '../../interfaces/persona.interface';
+import { Capacitacion } from '../../interfaces/capacitacion.interface';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
-  title: string = 'Socios';
-  header: string[] = [
-    '#',
-    'nombre',
-    'dni',
-    'banco comunal',
-    'avanze',
-    'acciones',
-  ];
-
-  filtros: string[] = ['Banquito', 'DNI'];
-  filtroSelect: string = '';
+  @Input() name: string = 'Personas';
+  @Input() header: string[] = ['#', '', '', '', '', 'acciones'];
+  @Input() dataTable: Observable<any[]> = new Observable();
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  onRadioChange(event: any) {
-    this.filtroSelect = event.target.value;
-  }
 }

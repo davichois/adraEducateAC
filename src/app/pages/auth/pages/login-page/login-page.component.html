@@ -8,10 +8,15 @@
     <h2>Iniciar sesión</h2>
     <form>
       <div class="iDni">
-        <app-input-text></app-input-text>
+        <app-input-text [(input)]="input" placeHolder="DNI"></app-input-text>
       </div>
-      <app-button routerLink="client" name="INICIAR SESIÓN" [paddingRL]="105" [paddingTB]="8" [fontSize]="14">
+      <app-button (click)="onLogin()" name="INICIAR SESIÓN" [paddingRL]="105" [paddingTB]="8" [fontSize]="14">
       </app-button>
     </form>
+  </div>
+</div>
+
+<div class="loading-background" *ngIf="isLoading$ | async">
+  <div class="loading">
   </div>
 </div>

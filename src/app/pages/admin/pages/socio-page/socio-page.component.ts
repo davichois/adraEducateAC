@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../../../state/app.state';
+import { selectPersonas } from '../../../../state/selectors/personas.selectors';
+import { getPersonasLoad } from '../../../../state/actions/personas.action';
+import { Observable } from 'rxjs';
+import { Persona } from '../../interfaces/persona.interface';
 
 @Component({
   selector: 'app-usuario-page',
@@ -7,10 +13,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioPageComponent implements OnInit {
   stateForm: boolean = false;
+  header: string[] = [
+    '#',
+    'nombre',
+    'dni',
+    'telefono',
+    'direccion',
+    'acciones',
+  ];
+  personasList$: Observable<any[]> = new Observable();
 
-  constructor() {}
+  constructor(private personaEffect: Store<AppState>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.personaEffect.dispatch(getPersonasLoad());
+    this.personasList$ = this.personaEffect.select(selectPersonas);
+  }
 
   onChangeStateForm() {
     this.stateForm = !this.stateForm;
