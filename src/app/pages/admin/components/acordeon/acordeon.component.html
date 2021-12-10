@@ -5,6 +5,6 @@
   </div>
 
   <div class="acordeon-content" [ngClass]="{'active-content': state_acordeon}">
-    <app-acordeon-item></app-acordeon-item>
+    <app-acordeon-item [acordeonItem]="item" *ngFor="let item of acordeonItem"></app-acordeon-item>
   </div>
 </div>

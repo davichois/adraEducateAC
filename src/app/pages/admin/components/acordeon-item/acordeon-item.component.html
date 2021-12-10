@@ -1,1 +1,4 @@
-<p routerLink="banco">usuario-page works!</p>
+<div class="acordeon__item">
+  <img [src]="acordeonItem.icon" [alt]="acordeonItem.name">
+  <p [routerLink]="[acordeonItem.route]">{{acordeonItem.name}}</p>
+</div>

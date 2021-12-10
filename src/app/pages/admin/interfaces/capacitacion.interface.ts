@@ -10,3 +10,9 @@ export interface Capacitacion {
   esCapacitacion?: string;
   fiImageURL?: string;
 }
+
+export interface CapacitacionState {
+  capacitaciones: Capacitacion[];
+  capacitacion: Capacitacion;
+  isLoading: boolean;
+}

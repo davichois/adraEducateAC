@@ -15,7 +15,16 @@ export class PedidoOracionService {
   constructor(private http: HttpClient) {}
 
   findAll(): Observable<RespAdraEducate> {
-    return this.http.get<RespAdraEducate>(this.apiUrl).pipe(
+    return this.http.get<RespAdraEducate>(`${this.apiUrl}`).pipe(
+      catchError((error: HttpErrorResponse) => {
+        console.error(error);
+        return throwError(error);
+      })
+    );
+  }
+
+  findAllReport(): Observable<RespAdraEducate> {
+    return this.http.get<RespAdraEducate>(`${this.apiUrl}report`).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error(error);
         return throwError(error);

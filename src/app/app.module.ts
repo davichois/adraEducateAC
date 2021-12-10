@@ -11,6 +11,8 @@ import { ROOT_REDUCERS } from './state/app.state';
 import { AuthEffects } from './state/effects/auth.effects';
 import { PedidoOracionEffects } from './state/effects/pedidoOracion.effects';
 import { PersonasEffects } from './state/effects/personas.effects';
+import { BancosComunalEffects } from './state/effects/bancosComunal.effects';
+import { CapacitacionEffects } from './state/effects/capacitacion.effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +25,13 @@ import { PersonasEffects } from './state/effects/personas.effects';
       maxAge: 25,
       logOnly: false,
     }),
-    EffectsModule.forRoot([AuthEffects, PedidoOracionEffects, PersonasEffects]),
+    EffectsModule.forRoot([
+      AuthEffects,
+      PedidoOracionEffects,
+      PersonasEffects,
+      BancosComunalEffects,
+      CapacitacionEffects,
+    ]),
     HttpClientModule,
   ],
   providers: [],

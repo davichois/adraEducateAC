@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
-import { getPedOra, getPedOraSuccess } from '../actions/pedidosOracion.action';
+import { getPedOra, getPedOraSuccess } from '../actions/pedidosOracion.actions';
 import { PedidoOracionState } from '../../pages/client/interfaces/pedidosOracion.interface';
-import { addPedOra } from '../actions/pedidosOracion.action';
+import { addPedOra } from '../actions/pedidosOracion.actions';
 
 // Estado inicial
 export const initialState: PedidoOracionState = {

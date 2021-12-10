@@ -1,0 +1,29 @@
+.acordeon__item {
+  display: flex;
+  align-items: center;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-right: 40px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.acordeon__item:hover {
+  background: var(--secundary-color_whiteitermedio);
+}
+
+.acordeon__item img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+}
+
+.acordeon__item p {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  margin-left: 10px;
+  color: var(--secundary-color_black);
+}

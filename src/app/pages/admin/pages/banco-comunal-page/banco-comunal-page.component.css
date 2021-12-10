@@ -1,0 +1,28 @@
+.acciones-ventana {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.acciones-ventana app-button {
+  margin-left: 10px;
+}
+
+.user-form {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.898);
+  border: 2px solid var(--secundary-color_whiteoscuro);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out 0.5s;
+  transform: translateX(100%);
+}
+
+.active {
+  transform: translateX(0%);
+}

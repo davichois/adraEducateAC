@@ -3,3 +3,9 @@ export interface BancoComunal {
   noBancoComunal?: string;
   idBcDistrito?: number;
 }
+
+export interface BancoComunalState {
+  bancosComunal: BancoComunal[];
+  bancoComunal: BancoComunal;
+  isLoading: boolean;
+}

@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../../state/app.state';
 import { selectPersonas } from '../../../../state/selectors/personas.selectors';
-import { getPersonasLoad } from '../../../../state/actions/personas.action';
+import { getPersonasLoad } from '../../../../state/actions/personas.actions';
 import { Observable } from 'rxjs';
-import { Persona } from '../../interfaces/persona.interface';
 
 @Component({
   selector: 'app-usuario-page',

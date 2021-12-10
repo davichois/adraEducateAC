@@ -11,7 +11,7 @@ export class PersonasEffects {
       ofType('[Persona] GET Personas'),
       tap(() => console.log('GET ALL Personas')),
       mergeMap(() =>
-        this.personaService.findAll().pipe(
+        this.personaService.findAllReport().pipe(
           map((personas) => ({
             type: '[Persona] GET Personas Success',
             personas: personas.body,

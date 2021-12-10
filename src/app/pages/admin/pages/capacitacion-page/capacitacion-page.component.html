@@ -1,0 +1,11 @@
+<div>
+  <h2 class="title-page">Capacitacion</h2>
+
+  <div class="acciones-ventana">
+    <app-button [routerLink]="['creators']" [fontSize]="14" [paddingRL]="25" [paddingTB]="10" name="Crear capacitacion"
+      icon="./assets/icon/credit-card.svg">
+    </app-button>
+  </div>
+
+  <app-table name="Capacitaciones" [header]="header" [dataTable]="capacitacionList$"></app-table>
+</div>

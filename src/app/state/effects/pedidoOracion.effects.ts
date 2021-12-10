@@ -11,7 +11,7 @@ export class PedidoOracionEffects {
       ofType('[Pedido Oracion] GET Pedido Oracion'),
       tap(() => console.log('GET ALL Pedidos Oracion')),
       mergeMap(() =>
-        this.pedidoOracionService.findAll().pipe(
+        this.pedidoOracionService.findAllReport().pipe(
           map((pedidoOracion) => ({
             type: '[Pedido Oracion] GET Pedido Oracion Success',
             pedidoOracions: pedidoOracion.body,

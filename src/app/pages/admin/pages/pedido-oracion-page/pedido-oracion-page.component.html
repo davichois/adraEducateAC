@@ -1,0 +1,16 @@
+<div>
+  <h2 class="title-page">Pedidos de Oracion</h2>
+
+  <div class="acciones-ventana">
+
+  </div>
+
+  <app-table name="Pedidos de Oraciones" [header]="header" [dataTable]="pedidosOracionList$"></app-table>
+
+
+  <div class="user-form" [class.active]="stateForm">
+    <button (click)="onChangeStateForm()">cerrar</button>
+  </div>
+
+
+</div>

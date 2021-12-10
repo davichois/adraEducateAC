@@ -4,7 +4,7 @@ import {
   getPersonasLoad,
   getPersonasSuccess,
   addPersona,
-} from '../actions/personas.action';
+} from '../actions/personas.actions';
 
 // Estado inicial
 export const initialState: PersonaState = {

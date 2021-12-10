@@ -13,8 +13,8 @@ export class PersonaService {
 
   constructor(private http: HttpClient) {}
 
-  findAll(): Observable<RespAdraEducate> {
-    return this.http.get<RespAdraEducate>(this.apiUrl);
+  findAllReport(): Observable<RespAdraEducate> {
+    return this.http.get<RespAdraEducate>(`${this.apiUrl}report`);
   }
 
   save(data: Persona): Observable<Persona> {

@@ -6,7 +6,7 @@ import { AppState } from '../../../../state/app.state';
 import {
   addPedOra,
   getPedOra,
-} from '../../../../state/actions/pedidosOracion.action';
+} from '../../../../state/actions/pedidosOracion.actions';
 import { selectPedidosOracion } from '../../../../state/selectors/pedidoOracion.selectors';
 import { Observable } from 'rxjs';
 

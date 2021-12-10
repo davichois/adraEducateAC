@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Persona } from '../../interfaces/persona.interface';
-import { Capacitacion } from '../../interfaces/capacitacion.interface';
 
 @Component({
   selector: 'app-table',

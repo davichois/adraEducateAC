@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AcordeonComponent implements OnInit {
   @Input() title: string = '';
+  @Input() acordeonItem: any[] = [];
 
   state_acordeon: boolean = false;
 
