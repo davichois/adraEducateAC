@@ -1,9 +1,11 @@
-<div class="card">
-  <div class="img">
-    <img src="https://educamundo.edu.ec/wp-content/uploads/2020/09/RRSSA.jpg" alt="">
+<a routerLink="../details/{{capacitacion?.idCapacitacion}}">
+  <div class="card">
+    <div class="img">
+      <img [src]="capacitacion?.fiImageURL" [alt]="capacitacion?.noCapacitacion">
+    </div>
+    <div class="content__card">
+      <h3>{{capacitacion?.noCapacitacion}}</h3>
+      <p>{{capacitacion?.tiCapacitacion}}</p>
+    </div>
   </div>
-  <div class="content__card">
-    <h3>Facebook ADDS en paginas web privadas.</h3>
-    <p>venta en redes</p>
-  </div>
-</div>
+</a>

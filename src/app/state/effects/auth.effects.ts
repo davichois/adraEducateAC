@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { EMPTY, throwError } from 'rxjs';
 import { map, mergeMap, catchError, tap, concatMap } from 'rxjs/operators';
-import { AuthService } from '../../pages/auth/services/auth.service';
+import { AuthService } from '../../providers/services/auth.service';
 
 @Injectable()
 export class AuthEffects {
@@ -20,7 +20,14 @@ export class AuthEffects {
             return throwError('error when retrieving hourly forecast');
           })
         )
-      )
+      ),
+      tap(()=>{
+        const tokenAuth = JSON.parse(localStorage.getItem('token') || '{}');
+        if (tokenAuth) {
+          let usuario = this.authService.obtenerDatosToken(tokenAuth.access_token);
+          localStorage.setItem('usuarioAuth', JSON.stringify(usuario));
+        }
+      })
     )
   );
 

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { VerCapacitacionPageComponent } from './pages/ver-capacitacion-page/ver-capacitacion-page.component';
+import { QuizPageComponent } from './pages/quiz-page/quiz-page.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
     component: ClientComponent,
     children: [
       { path: 'home', component: HomePageComponent },
-      { path: 'details', component: VerCapacitacionPageComponent },
+      { path: 'details/:id', component: VerCapacitacionPageComponent },
+      { path: 'quiz/:id', component: QuizPageComponent },
       { path: '**', redirectTo: 'home' },
     ],
   },

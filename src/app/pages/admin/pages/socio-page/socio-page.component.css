@@ -11,7 +11,7 @@
 .user-form {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 60%;
   bottom: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.898);
@@ -21,6 +21,62 @@
   justify-content: flex-start;
   transition: all ease-out 0.5s;
   transform: translateX(100%);
+  padding: 30px;
+}
+
+.opcionesPersona {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-self: center;
+}
+
+.opcionesPersona button {
+  padding: 12px 25px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.opcionesPersona .cerrarPersona {
+  border: #db5b5b solid 3px;
+  color: #db5b5b;
+}
+
+.opcionesPersona .crearPersona {
+  border: var(--primary-color) solid 3px;
+  color: var(--primary-color);
+}
+
+.opcionesPersona .editarPersona {
+  border: var(--blueblackintermedio) solid 3px;
+  color: var(--blueblackintermedio);
+}
+
+.formPersona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.formPersona input,
+select {
+  padding: 12px;
+  width: 80%;
+  margin: 8px;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
 }
 
 .active {

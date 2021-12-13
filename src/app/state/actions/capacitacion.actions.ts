@@ -1,7 +1,17 @@
 import { createAction, props } from '@ngrx/store';
-import { Capacitacion } from '../../pages/admin/interfaces/capacitacion.interface';
+import {
+  Capacitacion,
+  CapacitacionReport,
+} from '../../interfaces/capacitacion.interface';
 
-export const getCapacitacionLoad = createAction('[Capacitacion] GET Capacitacion');
+export const getCapacitacionLoad = createAction(
+  '[Capacitacion] GET Capacitacion'
+);
+
+export const getCapacitacionReportSuccess = createAction(
+  '[Capacitacion] GET Capacitacion Report Success',
+  props<{ capacitacionesReport: CapacitacionReport[] }>()
+);
 
 export const getCapacitacionSuccess = createAction(
   '[Capacitacion] GET Capacitacion Success',

@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 import { AppState } from '../app.state';
 
-import { PersonaState } from '../../pages/admin/interfaces/persona.interface';
+import { PersonaState } from '../../interfaces/persona.interface';
 
 // Padre
 export const selectPersonaFeature = (state: AppState) => state.persona;

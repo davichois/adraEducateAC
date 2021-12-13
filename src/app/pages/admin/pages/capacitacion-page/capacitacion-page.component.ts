@@ -3,8 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from '../../../../state/app.state';
 import { getCapacitacionLoad } from '../../../../state/actions/capacitacion.actions';
-import { selectCapacitaciones } from '../../../../state/selectors/capacitacion.selectors';
-import { Router } from '@angular/router';
+import { selectCapacitacionesReport } from '../../../../state/selectors/capacitacion.selectors';
 
 @Component({
   selector: 'app-capacitacion-page',
@@ -20,13 +19,15 @@ export class CapacitacionPageComponent implements OnInit {
     'nº seciones',
     'acciones',
   ];
-  capacitacionList$: Observable<any[]> = new Observable();
+  capacitacionReportList$: Observable<any[]> = new Observable();
 
   constructor(private capacitacionEffect: Store<AppState>) {}
 
   ngOnInit(): void {
     this.capacitacionEffect.dispatch(getCapacitacionLoad());
-    this.capacitacionList$ =
-      this.capacitacionEffect.select(selectCapacitaciones);
+
+    this.capacitacionReportList$ = this.capacitacionEffect.select(
+      selectCapacitacionesReport
+    );
   }
 }

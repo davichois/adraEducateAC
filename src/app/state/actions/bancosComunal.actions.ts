@@ -1,7 +1,15 @@
 import { createAction, props } from '@ngrx/store';
-import { BancoComunal } from '../../pages/admin/interfaces/bancoComunal.interface';
+import {
+  BancoComunal,
+  BancoComunalReport,
+} from '../../interfaces/bancoComunal.interface';
 
 export const getBCLoad = createAction('[Bancos Comunal] GET Bancos Comunal');
+
+export const getBCRSuccess = createAction(
+  '[Bancos Comunal] GET Bancos Comunal Report Success',
+  props<{ bancosComunalReport: BancoComunalReport[] }>()
+);
 
 export const getBCSuccess = createAction(
   '[Bancos Comunal] GET Bancos Comunal Success',

@@ -47,7 +47,6 @@ export class CapacitacionCreatorsPageComponent implements OnInit {
   }
 
   getCtrl(key: string, form: FormControl): any {
-
+    return form.get(key);
   }
-
 }

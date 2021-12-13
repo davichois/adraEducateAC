@@ -47,3 +47,7 @@ img {
   line-height: 21px;
   color: var(--primary-color);
 }
+
+a{
+  text-decoration: none;
+}

@@ -4,8 +4,8 @@
   width: 100%;
   grid-template-rows: 100px 650px;
   grid-template-areas:
-    "headerDetails ."
-    "contentDetails .";
+    "headerDetails spaceQuizz"
+    "contentDetails embededDocument";
 }
 
 .header__details {
@@ -33,13 +33,67 @@ progress {
 .sesiones__details {
   margin-top: 20px;
   display: flex;
-  padding: 5px 0;
-  width: auto;
-  max-width: 680px;
+  padding: 10px 0;
+  width: 550px;
   height: auto;
   overflow-x: scroll;
+  margin-bottom: 15px;
 }
 
-.sesiones__details app-button{
+.sesiones__details app-button {
   margin: 5px 0;
+}
+
+.embededDocument {
+  grid-area: embededDocument;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secundary-color_whiteitermedio);
+  border-radius: 10px;
+}
+
+.embededDocument iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.descargarDocument {
+  width: 100px;
+  height: 40px;
+  background-color: var(--secundary-color_whiteitermedio);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.descargarDocument a {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--blueblackoscuro);
+  padding: 20px;
+}
+
+app-button {
+  cursor: pointer;
+}
+
+.recurso__details {
+  width: 85%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: var(--secundary-color_whiteitermedio);
+}
+
+.spaceQuizSessionDate {
+  grid-area: spaceQuizz;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

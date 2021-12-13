@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { PersonaState } from '../../pages/admin/interfaces/persona.interface';
+import { PersonaState } from '../../interfaces/persona.interface';
 import {
   getPersonasLoad,
   getPersonasSuccess,

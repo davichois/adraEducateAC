@@ -1,4 +1,5 @@
 <div>
+
   <h2 class="title-page">Persona</h2>
 
   <div class="acciones-ventana">
@@ -13,8 +14,34 @@
 
 
   <div class="user-form" [class.active]="stateForm">
-    <button (click)="onChangeStateForm()">cerrar</button>
-  </div>
+    <form class="formPersona" [formGroup]="formPersona">
+      <input type="text" placeholder="nombre" formControlName="noPersona">
+      <input type="text" placeholder="apellido paterno" formControlName="apPaterno">
+      <input type="text" placeholder="apellido materno" formControlName="apMaterno">
+      <input type="text" placeholder="nº telefono" formControlName="nuTelefono">
+      <input type="text" placeholder="nº dni" formControlName="nuDni">
+      <input type="text" placeholder="direccion" formControlName="diPersona">
 
+      <select formControlName="tiSexo">
+        <option value="F" [defaultSelected]="true">Femenino</option>
+        <option value="M">Masculino</option>
+      </select>
+
+      <select formControlName="idBancoComunal">
+        <option [value]="banco.idBancoComunal" *ngFor="let banco of bancoList$|async ">{{banco.noBancoComunal}}</option>
+      </select>
+
+    </form>
+    <div class="opcionesPersona">
+      <button class="crearPersona" (click)="onSavePersona()" *ngIf="stateButtonsAccion; else editar">Crear</button>
+
+      <ng-template #editar>
+        <button class="editarPersona">Editar</button>
+      </ng-template>
+
+
+      <button class="cerrarPersona" (click)="onChangeStateForm()">Cerrar</button>
+    </div>
+  </div>
 
 </div>

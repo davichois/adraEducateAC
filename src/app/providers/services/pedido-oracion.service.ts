@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { RespAdraEducate } from '../../../interfaces/response.interface';
-import { PedidoOracion } from '../interfaces/pedidosOracion.interface';
+import { RespAdraEducate } from '../../interfaces/response.interface';
+import { PedidoOracion } from '../../pages/client/interfaces/pedidosOracion.interface';
 
 @Injectable({
   providedIn: 'root',

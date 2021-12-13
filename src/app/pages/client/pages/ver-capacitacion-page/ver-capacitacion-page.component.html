@@ -1,20 +1,31 @@
 <div class="content-global">
   <div class="details__grid">
     <div class="header__details">
-      <h2>Facebook ADS en paginas web privadas</h2>
+      <h2>{{capacitacionDetails?.noCapacitacion}}</h2>
       <progress max="100" value="34"></progress>
+    </div>
+
+    <div class="spaceQuizSessionDate">
+      <app-button name="CUESTIONARIO" [paddingRL]="10" [fontSize]="10" [paddingTB]="7"></app-button>
     </div>
 
     <div class="content__details">
       <div class="sesiones__details">
-        <app-button name="SESION ACTUAL" [paddingRL]="8" [fontSize]="10" [paddingTB]="3"></app-button>
-        <app-button name="Sesión 1" [paddingRL]="8" [fontSize]="10" [paddingTB]="3"></app-button>
-        <app-button name="Sesión 2" [paddingRL]="8" [fontSize]="10" [paddingTB]="3"></app-button>
-        <app-button name="Sesión 3" [paddingRL]="8" [fontSize]="10" [paddingTB]="3"></app-button>
+        <app-button [name]="sesionesNav.noSesion" [paddingRL]="10" [fontSize]="12" [paddingTB]="10" *ngFor="let sesionesNav of capacitacionDetails?.sesions" (click)="onIdSesion(sesionesNav.idSesion)"></app-button>
       </div>
       <div class="recurso__details">
-        
+
       </div>
     </div>
+
+    <div class="embededDocument">
+      <div class="descargarDocument">
+        <a href="https://s3.amazonaws.com/files.patmos.upeu.edu.pe/docs/upeu/11353_-1637478011.pdf">Descargar</a>
+      </div>
+      <iframe
+        src="https://docs.google.com/gview?url=https://s3.amazonaws.com/files.patmos.upeu.edu.pe/docs/upeu/11353_-1637478011.pdf&embedded=true"
+        frameborder="0"></iframe>
+    </div>
+
   </div>
 </div>

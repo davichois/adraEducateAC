@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 import { AppState } from '../app.state';
 
-import { BancoComunalState } from '../../pages/admin/interfaces/bancoComunal.interface';
+import { BancoComunalState } from '../../interfaces/bancoComunal.interface';
 
 // Padre
 export const selectBancoComunalFeature = (state: AppState) =>
@@ -14,13 +14,13 @@ export const selectIsLoading = createSelector(
 );
 
 // Hijo
-export const selectBancosComunal = createSelector(
+export const selectBancosComunalReport = createSelector(
   selectBancoComunalFeature,
-  (state: BancoComunalState) => state.bancosComunal
+  (state: BancoComunalState) => state.bancosComunalReport
 );
 
 // Hijo
-export const selectBancoComunal = createSelector(
+export const selectBancosComunal = createSelector(
   selectBancoComunalFeature,
-  (state: BancoComunalState) => state.bancoComunal
+  (state: BancoComunalState) => state.bancosComunal
 );

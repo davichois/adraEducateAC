@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
 import { map, mergeMap, catchError, tap, concatMap } from 'rxjs/operators';
-import { PedidoOracionService } from 'src/app/pages/client/services/pedido-oracion.service';
+import { PedidoOracionService } from 'src/app/providers/services/pedido-oracion.service';
 
 @Injectable()
 export class PedidoOracionEffects {

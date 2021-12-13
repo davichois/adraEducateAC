@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { AuthModel, AuthState } from '../../../interfaces/auth.interfaces';
+import { AuthModel, AuthState, Token } from '../../interfaces/auth.interfaces';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -21,11 +21,23 @@ export class AuthService {
 
     return this.http.post<AuthModel>(this.apiUrl, payload);
   }
+
+  obtenerDatosToken(accessToken: string): any {
+    if (accessToken != null && accessToken != '') {
+      return JSON.parse(atob(accessToken.split('.')[1]));
+    }
+    return null;
+  }
 }
 
-// .pipe(
-//   catchError((error: HttpErrorResponse) => {
-//     console.error(error);
-//     return throwError(error);
-//   })
-// );
+// guardarUsuario(accessToken: string): void {
+//   let datos = this.obtenerDatosToken(accessToken);
+//   this._usuario = {
+//     nombre: datos.nombre,
+//     apellido: datos.apellido,
+//     email: datos.email,
+//     username: datos.user_name,
+//     roles: datos.authorities, // roles
+//   };
+//   sessionStorage.setItem('usuario', JSON.stringify(this._usuario));
+// }

@@ -11,7 +11,9 @@ import { CardCapacitacionComponentComponent } from './components/card-capacitaci
 import { SharedModule } from '../../shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { JwtInterceptorInterceptor } from '../../jwt-interceptor.interceptor';
+import { JwtInterceptorInterceptor } from '../../providers/interceptors/jwt-interceptor.interceptor';
+import { QuizPageComponent } from './pages/quiz-page/quiz-page.component';
+import { AnswersDirective } from './directives/answers.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { JwtInterceptorInterceptor } from '../../jwt-interceptor.interceptor';
     FooterClientComponentComponent,
     RankingClientComponentComponent,
     CardCapacitacionComponentComponent,
+    QuizPageComponent,
+    AnswersDirective,
   ],
   imports: [
     CommonModule,

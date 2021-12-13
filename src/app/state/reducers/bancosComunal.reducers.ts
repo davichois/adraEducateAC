@@ -1,15 +1,17 @@
 import { createReducer, on } from '@ngrx/store';
-import { BancoComunalState } from '../../pages/admin/interfaces/bancoComunal.interface';
-import {
-  getBCLoad,
-  getBCSuccess,
-  addBC,
-} from '../actions/bancosComunal.actions';
+import { BancoComunalState } from '../../interfaces/bancoComunal.interface';
+import { getBCRSuccess, getBCSuccess } from '../actions/bancosComunal.actions';
+import { getBCLoad, addBC } from '../actions/bancosComunal.actions';
 
 // Estado inicial
 export const initialState: BancoComunalState = {
   bancosComunal: [],
-  bancoComunal: {},
+  bancosComunalReport: [],
+  bancoComunal: {
+    idBancoComunal: 0,
+    idBcDistrito: 0,
+    noBancoComunal: '',
+  },
   isLoading: false,
 };
 
@@ -18,6 +20,10 @@ export const bancoComunalReducer = createReducer(
   initialState,
   on(getBCLoad, (state) => {
     return { ...state, isLoading: true };
+  }),
+
+  on(getBCRSuccess, (state, { bancosComunalReport }) => {
+    return { ...state, isLoading: false, bancosComunalReport };
   }),
 
   on(getBCSuccess, (state, { bancosComunal }) => {

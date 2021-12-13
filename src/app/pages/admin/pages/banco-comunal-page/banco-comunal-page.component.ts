@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from '../../../../state/app.state';
 import { getBCLoad } from '../../../../state/actions/bancosComunal.actions';
-import { selectBancosComunal } from '../../../../state/selectors/bancosComunal.selectors';
+import { selectBancosComunalReport } from '../../../../state/selectors/bancosComunal.selectors';
 
 @Component({
   selector: 'app-banco-comunal-page',
@@ -27,7 +27,7 @@ export class BancoComunalPageComponent implements OnInit {
   ngOnInit(): void {
     this.bancoComunalEffect.dispatch(getBCLoad());
     this.bancoComunalList$ =
-      this.bancoComunalEffect.select(selectBancosComunal);
+      this.bancoComunalEffect.select(selectBancosComunalReport);
   }
 
   onChangeStateForm() {
