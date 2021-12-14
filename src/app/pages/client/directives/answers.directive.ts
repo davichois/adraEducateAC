@@ -10,12 +10,12 @@ import {
   selector: '[appAnswers]',
 })
 export class AnswersDirective {
-  @Input() correctAnswer: number = 1;
+  @Input() correctAnswer: string = '1';
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('click') onAnswered() {
-    if (this.correctAnswer ==1)
+    if (this.correctAnswer == '1')
       this.renderer.setStyle(
         this.elRef.nativeElement,
         'background-color',

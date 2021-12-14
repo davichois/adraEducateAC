@@ -10,6 +10,10 @@ import { bancoComunalReducer } from './reducers/bancosComunal.reducers';
 import { capacitacionReducer } from './reducers/capacitacion.reducers';
 import { CapacitacionState } from '../interfaces/capacitacion.interface';
 import { PersonaState } from '../interfaces/persona.interface';
+import { RecursoState } from '../interfaces/recurso.interface';
+import { recursoReducer } from './reducers/recurso.reducers';
+import { PreguntaState } from '../interfaces/pregunta.interface';
+import { preguntaReducer } from './reducers/pregunta.reducers';
 
 export interface AppState {
   auth: AuthState;
@@ -17,6 +21,8 @@ export interface AppState {
   persona: PersonaState;
   bancoComunal: BancoComunalState;
   capacitacion: CapacitacionState;
+  recurso: RecursoState;
+  pregunta: PreguntaState;
 }
 
 export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
@@ -25,4 +31,6 @@ export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
   persona: personaReducer,
   bancoComunal: bancoComunalReducer,
   capacitacion: capacitacionReducer,
+  recurso: recursoReducer,
+  pregunta: preguntaReducer,
 };

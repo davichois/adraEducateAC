@@ -6,14 +6,31 @@
     </div>
 
     <div class="spaceQuizSessionDate">
-      <app-button name="CUESTIONARIO" [paddingRL]="10" [fontSize]="10" [paddingTB]="7"></app-button>
+      <app-button [name]="item.noRecurso" [paddingRL]="10" [fontSize]="10" [paddingTB]="7" *ngFor="let item of quizz"
+        routerLink="../../quiz/{{item.idRecurso}}">
+      </app-button>
     </div>
 
     <div class="content__details">
       <div class="sesiones__details">
-        <app-button [name]="sesionesNav.noSesion" [paddingRL]="10" [fontSize]="12" [paddingTB]="10" *ngFor="let sesionesNav of capacitacionDetails?.sesions" (click)="onIdSesion(sesionesNav.idSesion)"></app-button>
+        <app-button [name]="sesionesNav.noSesion" [paddingRL]="10" [fontSize]="12" [paddingTB]="10"
+          *ngFor="let sesionesNav of capacitacionDetails?.sesions" (click)="onIdSesion(sesionesNav.idSesion)">
+        </app-button>
       </div>
       <div class="recurso__details">
+        <a [href]="recurso.fiURL" *ngFor="let recurso of salas" target="_blank">
+          <div>
+            <p>{{recurso.noRecurso}}</p>
+            <span>{{recurso.deRecurso}}</span>
+          </div>
+        </a>
+
+        <a *ngFor="let recurso of documentosEmbeber" (click)="onChageDocumet(recurso.fiURL)">
+          <div>
+            <p>{{recurso.noRecurso}}</p>
+            <span>{{recurso.deRecurso}}</span>
+          </div>
+        </a>
 
       </div>
     </div>
@@ -22,9 +39,7 @@
       <div class="descargarDocument">
         <a href="https://s3.amazonaws.com/files.patmos.upeu.edu.pe/docs/upeu/11353_-1637478011.pdf">Descargar</a>
       </div>
-      <iframe
-        src="https://docs.google.com/gview?url=https://s3.amazonaws.com/files.patmos.upeu.edu.pe/docs/upeu/11353_-1637478011.pdf&embedded=true"
-        frameborder="0"></iframe>
+      <iframe [src]="urlSafe" frameborder="0"></iframe>
     </div>
 
   </div>

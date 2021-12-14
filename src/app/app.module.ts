@@ -13,6 +13,8 @@ import { PedidoOracionEffects } from './state/effects/pedidoOracion.effects';
 import { PersonasEffects } from './state/effects/personas.effects';
 import { BancosComunalEffects } from './state/effects/bancosComunal.effects';
 import { CapacitacionEffects } from './state/effects/capacitacion.effects';
+import { RecursoEffects } from './state/effects/recurso.effects';
+import { PreguntaEffects } from './state/effects/pregunta.effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +33,8 @@ import { CapacitacionEffects } from './state/effects/capacitacion.effects';
       PersonasEffects,
       BancosComunalEffects,
       CapacitacionEffects,
+      RecursoEffects,
+      PreguntaEffects,
     ]),
     HttpClientModule,
   ],

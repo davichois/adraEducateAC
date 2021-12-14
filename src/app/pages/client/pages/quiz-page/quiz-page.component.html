@@ -1,22 +1,37 @@
-<div class="content-global">
+<div class="content-global" *ngIf="quizzes.length > currentQuizz; else terminoQuizz">
   <div class="header__quiz">
     <div class="title">
-      <h2>Facebook ADS en paginas web privadas.</h2>
+      <h2>{{capacitacionDetails?.noCapacitacion}}</h2>
     </div>
-    <p>0/10</p>
+    <p>{{currentQuizz}}/{{quizzes.length}}</p>
   </div>
 
   <div class="content__quiz">
-    <h3>Cual fue el tema del dia de hoy ?</h3>
+    <h3>{{quizzes[currentQuizz]?.noPregunta}}</h3>
 
-    <ul>
+    <ul *ngFor="let quiz of quizzes[currentQuizz]?.alternativas">
       <label>
-        <li appAnswers [correctAnswer]="0">
-          <input type="radio" name="options">
-          Sermon en el monte
+        <li appAnswers [correctAnswer]="quiz.esAlternativa">
+          <input type="radio" name="options" (change)="onAlternativa(quiz.esAlternativa)">
+          {{quiz.noAlternativa}}
         </li>
       </label>
     </ul>
 
   </div>
+
+  <div class="estadoQuizz">
+    <p>Alterativas correctas: {{correctAlternativa}}</p>
+    <p>Alterativas incorrectas: {{incorrectAlternativa}}</p>
+  </div>
+
 </div>
+
+<ng-template #terminoQuizz>
+  <div class="content-global-termino">
+    <div class="messageTermino">
+      <p>Se acabo el quizz ...</p>
+      <app-button name="regresar a sesion" [fontSize]="14" routerLink="../" ></app-button>
+    </div>
+  </div>
+</ng-template>
