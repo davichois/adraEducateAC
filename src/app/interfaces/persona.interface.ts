@@ -11,8 +11,17 @@ export interface Persona {
   esPersona?: string;
 }
 
+export interface PersonaReport {
+  idPersona: number;
+  noPersona: string;
+  nuDni: string;
+  nuTelefono: string;
+  diPersona: string;
+}
+
 export interface PersonaState {
   personas: Persona[];
+  personasReport: PersonaReport[];
   persona: Persona;
   isLoading: boolean;
 }

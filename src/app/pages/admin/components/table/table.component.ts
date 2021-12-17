@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,7 +10,18 @@ export class TableComponent implements OnInit {
   @Input() header: string[] = ['#', '', '', '', '', 'acciones'];
   @Input() dataTable: Observable<any[]> = new Observable();
 
+  @Output() itemOut = new EventEmitter<any>();
+  @Output() accionOut = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onData(data: any) {
+    this.itemOut.emit(data);
+  }
+
+  onAccion(accion: any) {
+    this.accionOut.emit(accion);
+  }
 }

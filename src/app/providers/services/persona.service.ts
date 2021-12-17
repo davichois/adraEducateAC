@@ -13,6 +13,10 @@ export class PersonaService {
 
   constructor(private http: HttpClient) {}
 
+  findAll(): Observable<RespAdraEducate> {
+    return this.http.get<RespAdraEducate>(`${this.apiUrl}`);
+  }
+
   findAllReport(): Observable<RespAdraEducate> {
     return this.http.get<RespAdraEducate>(`${this.apiUrl}report`);
   }
@@ -23,5 +27,9 @@ export class PersonaService {
 
   update(data: Persona, id: number): Observable<RespAdraEducate> {
     return this.http.put<RespAdraEducate>(`${this.apiUrl}${id}`, data);
+  }
+
+  delete(id: number): Observable<RespAdraEducate> {
+    return this.http.delete<RespAdraEducate>(`${this.apiUrl}${id}`);
   }
 }

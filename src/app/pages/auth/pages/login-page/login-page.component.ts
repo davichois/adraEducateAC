@@ -38,6 +38,9 @@ export class LoginPageComponent implements OnInit {
         pwdcredencial: this.input,
       };
       this.auth.dispatch(authComplete({ usuario }));
+      setTimeout(()=>{
+        this.router.navigate(["client"])
+      }, 1000)
     }
   }
 }

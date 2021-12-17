@@ -23,7 +23,7 @@ export class VerCapacitacionPageComponent implements OnInit {
   salas: Recurso[] = [];
 
   url: string =
-    'https://docs.google.com/gview?url=https://s3.amazonaws.com/files.patmos.upeu.edu.pe/docs/upeu/11353_-1637478011.pdf&embedded=true';
+    'https://docs.google.com/gview?url=https://s3.amazonaws.com/';
   urlSafe: SafeResourceUrl | undefined;
 
   capacitacionById$: Observable<any> = new Observable();

@@ -8,6 +8,7 @@
       <div class="th" *ngFor="let head of header"><span>{{head}}</span></div>
     </div>
     <div class="table_content">
-      <app-table-items [data]="data" *ngFor="let data of dataTable | async"></app-table-items>
+      <app-table-items [data]="data" *ngFor="let data of dataTable | async" (dataItem)="onData($event)" (typeButton)="onAccion($event)">
+      </app-table-items>
     </div>
   </div>

@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 import { Capacitacion } from '../../../../interfaces/capacitacion.interface';
 import { selectCapacitaciones } from 'src/app/state/selectors/capacitacion.selectors';
 import { getCapacitacionLoad } from '../../../../state/actions/capacitacion.actions';
+import { CapacitacionService } from '../../../../providers/services/capacitacion.service';
 
 @Component({
   selector: 'app-home-page',
@@ -25,19 +26,25 @@ export class HomePageComponent implements OnInit {
   finalDatePedido: Date = new Date();
 
   pedidosOracion$: Observable<PedidoOracion[]> = new Observable();
-  capacitacionList$: Observable<Capacitacion[]> = new Observable();
 
-  constructor(private homePageEffect: Store<AppState>) {}
+  constructor(
+    private homePageEffect: Store<AppState>,
+    private capacitacionService: CapacitacionService
+  ) {}
 
   ngOnInit(): void {
     this.homePageEffect.dispatch(getPedOra());
     this.homePageEffect.dispatch(getCapacitacionLoad());
 
     this.pedidosOracion$ = this.homePageEffect.select(selectPedidosOracion);
-    this.capacitacionList$ = this.homePageEffect.select(selectCapacitaciones);
 
-    this.capacitacionList$.subscribe((data) => {
-      data.forEach((cap) => {
+    const userCurrent = JSON.parse(localStorage.getItem("usuarioAuth") || '{}')
+    console.log(userCurrent.sub);
+
+
+
+    this.capacitacionService.findByCredencial(userCurrent.sub).subscribe((data) => {
+      data.body.forEach((cap: Capacitacion) => {
         if (cap.tiCapacitacion === 'Meeting') {
           this.capacitacionMeeting.push(cap);
         } else {
@@ -45,6 +52,7 @@ export class HomePageComponent implements OnInit {
         }
       });
     });
+
   }
 
   onPedido() {

@@ -1,0 +1,117 @@
+/* table */
+.asignacionTable {
+  width: 100%;
+  min-height: 453px;
+  background-color: var(--secundary-color_whiteitermedio);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.asignacio_header {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 35px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.asignacio_title {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: var(--secundary-color_gray);
+}
+
+.user_search {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 2px solid var(--secundary-color_grayclaro);
+  box-sizing: border-box;
+}
+
+.user_search:focus {
+  outline: none;
+  border-width: 2px;
+  border-color: var(--primary-color);
+}
+
+.table {
+  width: 100%;
+  min-height: 356px;
+  background-color: var(--secundary-color_white);
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.table_content {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.table_header {
+  width: 100%;
+}
+
+.grid-table-colm {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.table .table_body .tb,
+.table .table_header .th {
+  box-sizing: border-box;
+  padding: 13px 10px;
+  overflow: hidden;
+  align-self: center;
+}
+.table .table_body .tb span,
+.table .table_header .th span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  -webkit-line-clamp: 1;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--secundary-color_gray);
+}
+
+.table .table_body .tb span {
+  font-weight: 500;
+  text-align: center;
+  color: var(--secundary-color_grayclaro);
+}
+
+.table .table_header .th span {
+  font-weight: 700;
+  text-align: center;
+}
+
+.acciones__user {
+  display: flex;
+  justify-content: center;
+}
+
+.acciones__user app-button {
+  cursor: pointer;
+  padding: 0px 2px;
+}
+
+.table_body:hover {
+  background: var(--secundary-color_whiteitermedio);
+  border-radius: 20px;
+}

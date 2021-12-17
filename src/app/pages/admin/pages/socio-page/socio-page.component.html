@@ -10,7 +10,8 @@
     </app-button>
   </div>
 
-  <app-table name="Personas" [header]="header" [dataTable]="personasList$"></app-table>
+  <app-table name="Personas" [header]="header" [dataTable]="personasReportList$" (itemOut)="onPersona($event)"
+    (accionOut)="onTypeAccion($event)"></app-table>
 
 
   <div class="user-form" [class.active]="stateForm">
@@ -33,7 +34,7 @@
 
     </form>
     <div class="opcionesPersona">
-      <button class="crearPersona" (click)="onSavePersona()" *ngIf="stateButtonsAccion; else editar">Crear</button>
+      <button class="crearPersona" (click)="onSavePersona()" *ngIf="stateButtonsAccion==1; else editar">Crear</button>
 
       <ng-template #editar>
         <button class="editarPersona">Editar</button>

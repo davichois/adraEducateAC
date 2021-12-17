@@ -2,11 +2,32 @@
   <app-button routerLink=".." name="cerrar" [fontSize]="14" [paddingRL]="5" [paddingTB]="2"></app-button>
 
   <form class="infoCapacitacion">
-    <input type="text">
-    <textarea cols="30" rows="10"></textarea>
-    <input type="date">
-    <input type="date">
-    <input type="text">
+    <div class="btnSubirImagen">
+      <app-button name="subir foto" type="File" [fontSize]="14" [paddingRL]="8" [paddingTB]="6"></app-button>
+    </div>
+    <div class="nameCap">
+      <input type="text" placeholder="Nombre de capacitacion">
+    </div>
+    <div class="desCap">
+      <textarea cols="30" rows="10" placeholder="Descripcion de la capacitacion"></textarea>
+    </div>
+    <div class="fechasCap">
+      <input type="text" placeholder="Fecha Incio Capacitacion" onFocus="(this.type='date')">
+      <input type="text" placeholder="Fecha Fin de Capacitacion" onFocus="(this.type='date')">
+    </div>
+    <div class="selectsCap">
+      <select>
+        <option value="">Tipo capacitacion</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Webinar">Webinar</option>
+      </select>
+      <select>
+        <option value="">Selecciona una Categoria</option>
+      </select>
+    </div>
+    <div class="btnCreacionCap">
+      <app-button name="Crear capacitacion" [fontSize]="14" [paddingRL]="8" [paddingTB]="6"></app-button>
+    </div>
   </form>
 
 </div>

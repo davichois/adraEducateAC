@@ -31,11 +31,8 @@ export const selectCapacitacion = createSelector(
   (state: CapacitacionState) => state.capacitacion
 );
 
-export const selectItems = (state: AppState) =>
-  state.capacitacion.capacitaciones;
-
 export const getCapacitacionById = (id: any) =>
-  createSelector(selectItems, (allItems) => {
+  createSelector(selectCapacitaciones, (allItems) => {
     if (allItems) {
       return allItems.find((item) => {
         return item.idCapacitacion == id;

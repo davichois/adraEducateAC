@@ -25,7 +25,6 @@ export class CapacitacionCreatorsPageComponent implements OnInit {
       feInicio: new FormControl('', [Validators.required]),
       feFin: new FormControl('', [Validators.required]),
       tiCapacitacion: new FormControl('', [Validators.required]),
-      esCapacitacion: new FormControl('', [Validators.required]),
       imagenURL: new FormControl('', [Validators.required]),
       idCategoria: new FormControl('', [Validators.required]),
       sesiones: new FormArray([]),

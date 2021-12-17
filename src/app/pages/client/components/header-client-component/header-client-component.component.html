@@ -18,8 +18,8 @@
   <div class="box__option" *ngIf="state_option">
     <ul>
       <li>Perfil</li>
-      <li [routerLink]="'/admin'" >Panel</li>
-      <li>Salir</li>
+      <li [routerLink]="'/admin'">Panel</li>
+      <li (click)="onSalir()">Salir</li>
     </ul>
   </div>
 </div>

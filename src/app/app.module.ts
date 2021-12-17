@@ -15,6 +15,7 @@ import { BancosComunalEffects } from './state/effects/bancosComunal.effects';
 import { CapacitacionEffects } from './state/effects/capacitacion.effects';
 import { RecursoEffects } from './state/effects/recurso.effects';
 import { PreguntaEffects } from './state/effects/pregunta.effects';
+import { BCCEffects } from './state/effects/bcc.effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,6 +36,7 @@ import { PreguntaEffects } from './state/effects/pregunta.effects';
       CapacitacionEffects,
       RecursoEffects,
       PreguntaEffects,
+      BCCEffects,
     ]),
     HttpClientModule,
   ],

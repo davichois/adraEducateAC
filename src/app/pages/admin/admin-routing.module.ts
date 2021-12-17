@@ -7,6 +7,7 @@ import { BancoComunalPageComponent } from './pages/banco-comunal-page/banco-comu
 import { PedidoOracionPageComponent } from './pages/pedido-oracion-page/pedido-oracion-page.component';
 import { CapacitacionPageComponent } from './pages/capacitacion-page/capacitacion-page.component';
 import { CapacitacionCreatorsPageComponent } from './pages/capacitacion-creators-page/capacitacion-creators-page.component';
+import { AsignacionCapacitacionPageComponent } from './pages/asignacion-capacitacion-page/asignacion-capacitacion-page.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'socio', component: UsuarioPageComponent, pathMatch: 'full' },
       { path: 'banco', component: BancoComunalPageComponent },
+      { path: 'asignacion', component: AsignacionCapacitacionPageComponent },
       { path: 'pedidoOracion', component: PedidoOracionPageComponent },
       {
         path: 'capacitacion',

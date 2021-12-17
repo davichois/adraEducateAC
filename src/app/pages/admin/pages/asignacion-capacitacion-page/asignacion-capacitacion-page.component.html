@@ -1,0 +1,20 @@
+<div>
+  <h3 class="title-page">Asignacion de capacitacion</h3>
+
+  <br>
+
+  <div class="eleccionCapacitacion">
+    <h3>Seleccion de Capacitacion</h3>
+    <form [formGroup]="formCap">
+      <select formControlName="idCap">
+        <option [value]="item.idCapacitacion" *ngFor="let item of capacitacionList">
+          {{item.noCapacitacion}} - {{item.tiCapacitacion}}</option>
+      </select>
+    </form>
+  </div>
+  <app-table-asignacion [bancoComunalList]="bancoComunalList" (bcOutSelect)="onBCCList($event)"></app-table-asignacion>
+
+  <div class="buttonAsignar">
+    <app-button name="Asignar" (click)="onAssing()"></app-button>
+  </div>
+</div>

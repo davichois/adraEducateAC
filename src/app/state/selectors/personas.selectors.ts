@@ -19,7 +19,24 @@ export const selectPersonas = createSelector(
 );
 
 // Hijo
+export const selectPersonasReport = createSelector(
+  selectPersonaFeature,
+  (state: PersonaState) => state.personasReport
+);
+
+// Hijo
 export const selectPersona = createSelector(
   selectPersonaFeature,
   (state: PersonaState) => state.persona
 );
+
+export const getPersonaById = (id: any) =>
+  createSelector(selectPersonas, (allItems) => {
+    if (allItems) {
+      return allItems.find((item) => {
+        return item.idPersona == id;
+      });
+    } else {
+      return {};
+    }
+  });

@@ -25,6 +25,10 @@ export class CapacitacionService {
     return this.http.get<RespAdraEducate>(`${this.apiUrl}${idCap}`);
   }
 
+  findByCredencial(credencials: string): Observable<RespAdraEducate> {
+    return this.http.get<RespAdraEducate>(`${this.apiUrl}bcu/${credencials}`);
+  }
+
   save(data: Capacitacion): Observable<Capacitacion> {
     return this.http.post<Capacitacion>(this.apiUrl, data);
   }

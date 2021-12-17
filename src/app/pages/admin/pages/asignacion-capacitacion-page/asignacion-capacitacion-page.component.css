@@ -1,9 +1,3 @@
-.infoCapacitacion {
-  margin-top: 30px;
-}
-
-input,
-textarea,
 select {
   width: 100%;
   height: 38px;
@@ -21,32 +15,26 @@ select {
   color: var(--secundary-color_black);
 }
 
-textarea {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 60px;
+.eleccionCapacitacion {
+  margin: 30px 0;
+  width: 30%;
+  margin-bottom: 50px;
 }
 
-.btnCreacionCap {
-  margin-top: 15px;
+.eleccionCapacitacion h3 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: var(--secundary-color_gray);
+  margin-bottom: 10px;
+}
+
+.buttonAsignar{
   display: flex;
   justify-content: flex-end;
-}
-
-.btnSubirImagen {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.fechasCap, .selectsCap {
-  display: flex;
-}
-
-.fechasCap input:nth-child(1) {
-  margin-right: 50px;
-}
-
-.selectsCap select:nth-child(1){
-  margin-right: 50px;
+  padding: 20px 10px;
+  margin-top: 10px;
 }

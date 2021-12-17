@@ -1,7 +1,7 @@
 <div class="table_body grid-table-colm">
   <div class="tb" *ngFor="let key of objectKeys(data)"><span>{{data[key]}}</span></div>
   <div class="tb acciones__user">
-    <app-button [fontSize]="10" name="EDITAR" [paddingRL]="4" [paddingTB]="0"></app-button>
-    <app-button [fontSize]="10" name="ELIMINAR" [paddingRL]="4" [paddingTB]="0"></app-button>
+    <app-button [fontSize]="10" name="EDITAR" [paddingRL]="4" [paddingTB]="0" (click)="onEditItem()"></app-button>
+    <app-button [fontSize]="10" name="ELIMINAR" [paddingRL]="4" [paddingTB]="0" (click)="onDeleteItem()"></app-button>
   </div>
 </div>

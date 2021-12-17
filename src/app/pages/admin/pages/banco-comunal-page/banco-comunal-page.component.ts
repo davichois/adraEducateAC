@@ -26,8 +26,9 @@ export class BancoComunalPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.bancoComunalEffect.dispatch(getBCLoad());
-    this.bancoComunalList$ =
-      this.bancoComunalEffect.select(selectBancosComunalReport);
+    this.bancoComunalList$ = this.bancoComunalEffect.select(
+      selectBancosComunalReport
+    );
   }
 
   onChangeStateForm() {

@@ -15,6 +15,8 @@ import { PedidoOracionPageComponent } from './pages/pedido-oracion-page/pedido-o
 import { CapacitacionPageComponent } from './pages/capacitacion-page/capacitacion-page.component';
 import { CapacitacionCreatorsPageComponent } from './pages/capacitacion-creators-page/capacitacion-creators-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AsignacionCapacitacionPageComponent } from './pages/asignacion-capacitacion-page/asignacion-capacitacion-page.component';
+import { TableAsignacionComponent } from './components/table-asignacion/table-asignacion.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PedidoOracionPageComponent,
     CapacitacionPageComponent,
     CapacitacionCreatorsPageComponent,
+    AsignacionCapacitacionPageComponent,
+    TableAsignacionComponent,
   ],
   imports: [
     CommonModule,

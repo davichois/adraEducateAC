@@ -1,0 +1,24 @@
+<div class="asignacionTable">
+
+  <div class="asignacio_header">
+    <h3 class="asignacio_title">Bancos Comunales en ADRA educate</h3>
+    <!-- <input class="user_search" type="text" placeholder="Buscar" /> -->
+  </div>
+
+  <div class="table">
+    <div class="table_header grid-table-colm">
+      <div class="th"><span>check option</span></div>
+      <div class="th"><span>Banco Comunal</span></div>
+      <div class="th"><span>Distrito</span></div>
+      <div class="th"><span>Provincia</span></div>
+    </div>
+    <div class="table_content">
+      <div class="table_body grid-table-colm" *ngFor="let data of bancoComunalList">
+        <div class="tb"><span><input type="checkbox" (change)="onChange(data.idBC, $event)"></span></div>
+        <div class="tb"><span>{{data.noBC}}</span></div>
+        <div class="tb"><span>{{data.disBC}}</span></div>
+        <div class="tb"><span>{{data.proBC}}</span></div>
+      </div>
+    </div>
+
+  </div>

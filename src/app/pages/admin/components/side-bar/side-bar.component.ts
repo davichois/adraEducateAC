@@ -8,16 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SideBarComponent implements OnInit {
   acordeonItemListEC: any[] = [
     {
-      icon: '../../../../../assets/icon/user.svg',
-      name: 'Persona',
-      route: 'socio',
-    },
-    {
-      icon: '../../../../../assets/icon/repeat.svg',
-      name: 'Asignacion de capacitacion',
-      route: 'banco',
-    },
-    {
       icon: '../../../../../assets/icon/credit-card-black.svg',
       name: 'Banco Comunal',
       route: 'banco',
@@ -28,10 +18,20 @@ export class SideBarComponent implements OnInit {
       route: 'capacitacion',
     },
     {
-      icon: '../../../../../assets/icon/bookmark.svg',
-      name: 'Categoria',
-      route: 'banco',
+      icon: '../../../../../assets/icon/repeat.svg',
+      name: 'Asignacion de capacitacion',
+      route: 'asignacion',
     },
+    {
+      icon: '../../../../../assets/icon/user.svg',
+      name: 'Persona',
+      route: 'socio',
+    },
+    // {
+    //   icon: '../../../../../assets/icon/bookmark.svg',
+    //   name: 'Categoria',
+    //   route: 'banco',
+    // },
   ];
 
   acordeonItemListES: any[] = [

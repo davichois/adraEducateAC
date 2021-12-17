@@ -14,6 +14,8 @@ import { RecursoState } from '../interfaces/recurso.interface';
 import { recursoReducer } from './reducers/recurso.reducers';
 import { PreguntaState } from '../interfaces/pregunta.interface';
 import { preguntaReducer } from './reducers/pregunta.reducers';
+import { BCCState } from '../interfaces/bcc.interfaces';
+import { bccReducer } from './reducers/bcc.reducers';
 
 export interface AppState {
   auth: AuthState;
@@ -23,6 +25,7 @@ export interface AppState {
   capacitacion: CapacitacionState;
   recurso: RecursoState;
   pregunta: PreguntaState;
+  bcc: BCCState;
 }
 
 export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
@@ -33,4 +36,5 @@ export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
   capacitacion: capacitacionReducer,
   recurso: recursoReducer,
   pregunta: preguntaReducer,
+  bcc: bccReducer,
 };
